@@ -1,0 +1,3 @@
+[submodule "DungeonAssistant"]
+	path = dataset
+	url = https://huggingface.co/datasets/gyrojeff/DungeonAssistant
