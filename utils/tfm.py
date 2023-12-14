@@ -1,4 +1,5 @@
 import numpy as np
+import copy
 
 
 def transform_trajectory(points, transformation):
@@ -44,3 +45,27 @@ def transform_clouds_and_trajectories(clouds, trajectories, matrices):
     for i in range(min(len(matrices), len(clouds), len(trajectories))):
         clouds[i].transform(matrices[i])
         trajectories[i] = transform_trajectory(trajectories[i], matrices[i])
+
+
+def retrieve_floor_plan(cloud, scale=100):
+    """retrieve floor plan from point cloud
+
+    Args:
+        cloud: point cloud
+
+    Returns:
+        floor plan (image), min_coords, max_coords
+    """
+    cloud_xy = copy.deepcopy(np.asarray(cloud.points))[:, (0, 2)]
+    # turn them into 2d floor plan image
+    cloud_xy = np.round(cloud_xy * scale).astype(np.int32)
+
+    min_coords = np.min(cloud_xy, axis=0)
+    max_coords = np.max(cloud_xy, axis=0)
+    image_size = np.abs(max_coords - min_coords) + 1
+    cloud_xy -= min_coords
+
+    floor_plan = np.zeros(image_size)
+    floor_plan[cloud_xy[:, 0], cloud_xy[:, 1]] = 1
+
+    return floor_plan, min_coords, max_coords
