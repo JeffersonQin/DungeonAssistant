@@ -31,4 +31,8 @@ cloud = o3d.io.read_point_cloud(args.pointcloud)
 floorplan, min_coords, max_coords = tfm.retrieve_floor_plan(cloud, scale=args.scale)
 
 plt.imsave(args.output, floorplan, cmap="gray")
-print(min_coords, max_coords)
+
+print(f"minX: {min_coords[0]}, minY: {min_coords[1]}")
+print(f"maxX: {max_coords[0]}, maxY: {max_coords[1]}")
+print(f"scale: {args.scale}")
+print(f"floor plan saved to: {args.output}")
