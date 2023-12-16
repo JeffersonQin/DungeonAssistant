@@ -1,3 +1,6 @@
 [submodule "DungeonAssistant"]
 	path = dataset
 	url = https://huggingface.co/datasets/gyrojeff/DungeonAssistant
+[submodule "multiscan"]
+	path = multiscan
+	url = https://github.com/JeffersonQin/multiscan-modified
