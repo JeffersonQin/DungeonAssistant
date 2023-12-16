@@ -4,3 +4,6 @@
 [submodule "multiscan"]
 	path = multiscan
 	url = https://github.com/JeffersonQin/multiscan-modified
+[submodule "capturer"]
+	path = capturer
+	url = https://github.com/JeffersonQin/WiFiSignalCapturer
