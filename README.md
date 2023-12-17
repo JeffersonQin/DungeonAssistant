@@ -15,6 +15,7 @@
   - [Android Demo App](#android-demo-app)
     - [Usage / Configuration / Build](#usage--configuration--build)
     - [Demo Video](#demo-video)
+    - [Screenshot](#screenshot)
   - [TODO](#todo)
 
 
@@ -327,6 +328,10 @@ Also, you would need to replace the file
 ### Demo Video
 
 You can find the demo video here: https://youtu.be/XT8v7n0ZuOk
+
+### Screenshot
+
+![](docs/screenshot.jpg)
 
 ## TODO
 
