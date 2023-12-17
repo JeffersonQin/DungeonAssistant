@@ -1,5 +1,6 @@
 - [Dungeon Assistant](#dungeon-assistant)
   - [Architecture](#architecture)
+  - [Clone](#clone)
   - [Scripts](#scripts)
     - [`ply` file and trajectory viewer](#ply-file-and-trajectory-viewer)
     - [Closure Optimization for multiscan's result](#closure-optimization-for-multiscans-result)
@@ -34,6 +35,16 @@ Solution for indoor localization using WiFi signal and LiDAR.
 ```
 
 Technical report coming soon ...
+
+## Clone
+
+To clone all submodules, use
+
+```bash
+git clone --recurse-submodules -j8 git://github.com/JeffersionQin/DungeonAssistant.git
+```
+
+Note: the dataset is quite large, you might not want to clone it at first. Check out the usage of `git submodule` for more details.
 
 ## Scripts
 
