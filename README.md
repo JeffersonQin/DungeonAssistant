@@ -35,7 +35,7 @@ Solution for indoor localization using WiFi signal and LiDAR.
 └─utils            # utils for python scripts
 ```
 
-Technical report coming soon ...
+Technical details can be found in the [report](./report.pdf).
 
 ## Clone
 
